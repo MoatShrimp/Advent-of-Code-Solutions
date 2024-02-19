@@ -1,7 +1,11 @@
+using System.Reflection;
+
 namespace AdventOfCode.Tests;
 
 public class Day1Tests
 {
+
+    private static readonly string _executionDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!;
     [Fact]
     public void Task1_Test_From_Example()
     {
@@ -35,4 +39,18 @@ public class Day1Tests
       result.Should().Be(output);
     }
 
+    [Fact]
+    public void Should_ReturnTotal_From_InputFile()
+    {
+      // Arrange
+      var filePath = Path.Combine(_executionDirectory, "data", "day1-input.txt");
+      var input = File.ReadAllText(filePath);
+      var output = -1;
+
+      // Act
+      var result = Day1.Calibrater(input);
+
+      // Assert 
+      result.Should().Be(output); 
+    }
 }
