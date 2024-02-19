@@ -19,6 +19,20 @@ public class Day1Tests
 
       // Assert 
       result.Should().Be(exampleOutput);
-
     }
+
+    [Fact]
+    public void Should_ReturnZero_When_InputIsZero()
+    {
+      // Arrange
+      var input = "";
+      var output = 0;
+
+      // Act
+      var result = Day1.Calibrater(input);
+
+      // Assert 
+      result.Should().Be(output);
+    }
+
 }
