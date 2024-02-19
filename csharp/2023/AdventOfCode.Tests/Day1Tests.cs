@@ -45,7 +45,7 @@ public class Day1Tests
       // Arrange
       var filePath = Path.Combine(_executionDirectory, "data", "day1-input.txt");
       var input = File.ReadAllText(filePath);
-      var output = -1;
+      var output = 54597; // Generated from Day1.Calibrater(input), verified on website
 
       // Act
       var result = Day1.Calibrater(input);
