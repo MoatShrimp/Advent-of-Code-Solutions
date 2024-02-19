@@ -1,9 +1,9 @@
-﻿
+
 namespace AdventOfCode;
 
 public class Day1
 {
-  public static object Calibrater(string exampleInput)
+  private static int GetFirstAndLastNumericInString(string str)
   {
     throw new NotImplementedException();
   }
